@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.*
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         val resultado = Math.sqrt(resultadoCuadrado);
         print(resultado);
         textViewHipotenusa.text = resultado.toString();
+        val mensaje = "Hipotenusa: ${resultado}"
+        Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
     }
 
     fun limpiarCampos(){
